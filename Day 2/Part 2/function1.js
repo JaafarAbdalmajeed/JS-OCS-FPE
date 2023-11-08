@@ -434,7 +434,7 @@ Ex: fullName("Alex", "Mercer")
 function fullName(fname, lname){
   return `${fname} ${lname}`
 }
-console.log(fullName("Jaafar", "Alwahsh"))
+// console.log(fullName("Jaafar", "Alwahsh"))
 
 /*
 19
@@ -449,7 +449,15 @@ Ex: average(5,7,9,3,5)
 => 5.8
 
 */
-
+function average(num1, num2, num3, num4, num5){
+  let arr = [num1, num2, num3, num4, num5]
+  let sum = 0
+ for(let i = 0; i < 5; i++){
+  sum += arr[i]
+ } 
+ return sum/5
+}
+// console.log(average(5,7,9,3,5))
 
 /*
 20
@@ -465,7 +473,11 @@ Ex: randomNumber()
 => 0.475
 
 */
+function randomNumber(){
+  return Math.random()
+}
 
+// console.log(randomNumber())
 /*
 21
 Write a function called randomBetweenNumbers
@@ -481,6 +493,10 @@ Ex: randomBetweenNumbers(3,100)
 
 */
 
+function randomBetweenNumbers(min, max){
+  return Math.random() * (max - min) + min
+}
+console.log(randomBetweenNumbers(3, 100))
 
 /*
 22
@@ -502,8 +518,20 @@ Ex: scoreInUniversty(3)
 Ex: scoreInUniversty(71)
 => "C"
 */
-
-
+function scoreInUniversty(number){
+  if(number > 95 && number < 100){
+    return "A"
+  } else if(number > 85 && number < 94) {
+    return "B"
+  } else if(number > 70 && number < 84) {
+    return "C"
+  } else if(number > 50 && number < 69) {
+    return "D"
+  } else {
+    return "F" 
+  }
+}
+// console.log(scoreInUniversty(80))
 /*
 23
 Write a function called counter
@@ -521,7 +549,13 @@ Ex: counter()
 => 3
 
 */
-
+let number = 0
+function counter(){
+  return number++
+}
+// console.log(counter())
+// console.log(counter())
+// console.log(counter())
 
 /*
 24
@@ -554,4 +588,16 @@ Ex: resetCounter()
 Ex: counter()
 => 1
 */
+let numberCounter = 0
+function resetCounter(){
+  return numberCounter--
+}
 
+function counter(){
+  return numberCounter++
+}
+
+// console.log(counter())
+// console.log(counter())
+// console.log(resetCounter())
+// console.log(resetCounter())
