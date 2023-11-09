@@ -114,17 +114,21 @@ and return the two middle elemnt in an array if it is have an even elemnets
 Ex: middleOfArray([1,4,5]) => 4
 Ex: middleOfArray(["t","u","g","x"]) =>"u and g"
 */
- const middleOfArray = (arr) => {
-    let len = arr.length
-    if(len % 2 === 0){
-        return [ arr[len/2 - 1] ,arr[len/2]]
-    } else {
-        return [arr[parseInt(len/2)]]
-    }
- }
-console.log(middleOfArray([2,3, 4, 5, 6,5]))
-console.log(middleOfArray(['a','d' , 'r', 'o' ,' u']))
+
+
+//  const middleOfArray = (arr) => {
+//     let len = arr.length
+//     if(len % 2 === 0){
+//         return [ arr[len/2 - 1] ,arr[len/2]]
+//     } else {
+//         return [arr[parseInt(len/2)]]
+//     }
+//  }
+// console.log(middleOfArray([2,3, 4, 5, 6,5]))
+// console.log(middleOfArray(['a','d' , 'r', 'o' ,' u']))
 /*
+
+
 9
 Using assignment operator (=)
 make the animals array have these animals
@@ -137,6 +141,10 @@ var nums= [1,2,3,8,9]
 nums => [5,-22,3.5,44,98,44]
 */
 
+// var animals = []
+// animals[0] = 'cat';
+// animals[1] = 'ele';
+// animals[2] = 'bird';
 
 /*
 10
@@ -152,6 +160,14 @@ Ex: indexOfArray(nums,4) => 9
 **try more cases by your self
 */
 
+// const indexOfArray =  (arr, index) => {
+//     return arr[index]
+// }
+
+// console.log(indexOfArray(['q', 'f', 'k', 'o', 'p' ,'k','c'], 4))
+
+
+
 
 /*
 11
@@ -166,7 +182,14 @@ Ex: arrayExceptLast(nums) =>  [1,2,3,8]
 */
 
 
+
+// const arrayExceptLast = (arr) => {
+//     return arr.slice(0, arr.length-1)
+// }
+// console.log(arrayExceptLast([1,2,3,8,9]))
 /*
+
+
 12
 Create a function called addToEnd
 that accept an array and value
@@ -177,7 +200,11 @@ Ex: addToEnd(nums,55) =>  [1,2,3,8,55]
 
 **try more cases by your self
 */
-
+//  const addToEnd = (arr, element) => {
+//     arr.push(element)
+//     return arr
+//  }
+// console.log(addToEnd([1,2,3,8,9], 55))
 
 // all the exercises below should solved 2 times: 1- for loop 2- while lopp
 /*
@@ -193,6 +220,19 @@ Ex: sumArray(nums) => 23
 **try more cases by your self
 */
 
+// const sumArray = (arr) => {
+//     let sum = 0
+//     arr.forEach(element => {
+//         sum += element
+//     });
+//     return sum
+// }
+// console.log(sumArray([1,2,3,8,9]))
+
+
+
+
+
 
 /*
 14
@@ -206,6 +246,19 @@ Ex: minInArray(nums) => 1
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
+// const minInArray = (arr) => {
+//     arr.sort()
+//     return arr[0]
+// }
+// console.log(minInArray([1,2,3,8,9]))
+
+
+
+
+
+
+
 
 
 /*
@@ -221,6 +274,13 @@ Ex: minInArray(nums,8) => [1,2,3,9]
 **try more cases by your self
 */
 
+// const removeFromArray = (arr , element) => {
+//    let indexElement = arr.indexOf(element)
+//    arr.splice(element, 1)
+//    return arr
+// }
+
+// console.log(removeFromArray([1,2,3,9], 2))
 
 /*
 16
@@ -235,6 +295,18 @@ Ex: oddArray(nums) => [1,3,9]
 **try more cases by your self
 */
 
+const oddArray = (arr) => {
+    let oddArr = []
+    arr.forEach(element => {
+        if(element % 2 === 1){
+            oddArr.push(element)
+        }
+
+    });
+    return oddArr
+}
+
+console.log(oddArray([1,2,3,8,9]))
 
 /*
 17
