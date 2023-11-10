@@ -450,20 +450,36 @@ Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-const powerElementIndex = (arr) => {
-    let arrNum = []
+
+
+
+
+
+
+
+// const powerElementIndex = (arr) => {
+//     let arrNum = []
     
-    for(let i =0 ;i < arr.length; i++){
-        let num = 1
-        for(let j = 0 ; j < i; j++){
-            num *= arr[i]
-        }
-        arrNum.push(num)
-    }
-    return arrNum
-}
-console.log(powerElementIndex([44, 5, 4, 3, 2, 10]))
+//     for(let i =0 ;i < arr.length; i++){
+//         let num = 1
+//         for(let j = 0 ; j < i; j++){
+//             num *= arr[i]
+//         }
+//         arrNum.push(num)
+//     }
+//     return arrNum
+// }
+// console.log(powerElementIndex([44, 5, 4, 3, 2, 10]))
 /*
+
+
+
+
+
+
+
+
+
 22
 Create a function called evenNumberEvenIndex
 that accept an array of nums
@@ -475,3 +491,16 @@ Ex: evenNumberEvenIndex(nums) => [2,8,34]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+
+
+// const evenNumberEvenIndex = (nums) => {
+//     let result = []
+//     for(let i = 0; i < nums.length; i++){
+        
+//         if(i % 2 === 0 && nums[i] % 2 === 0){
+//             result.push(nums[i])
+//         }
+//     }
+//     return result
+// }
+// console.log(evenNumberEvenIndex([5,2,2,1,8,66,55,77,34,9,55,1]))
