@@ -295,18 +295,18 @@ Ex: oddArray(nums) => [1,3,9]
 **try more cases by your self
 */
 
-const oddArray = (arr) => {
-    let oddArr = []
-    arr.forEach(element => {
-        if(element % 2 === 1){
-            oddArr.push(element)
-        }
+// const oddArray = (arr) => {
+//     let oddArr = []
+//     arr.forEach(element => {
+//         if(element % 2 === 1){
+//             oddArr.push(element)
+//         }
 
-    });
-    return oddArr
-}
+//     });
+//     return oddArr
+// }
 
-console.log(oddArray([1,2,3,8,9]))
+// console.log(oddArray([1,2,3,8,9]))
 
 /*
 17
@@ -324,6 +324,18 @@ Ex: aveArray(nums) => 16.6
 **try more cases by your self
 */
 
+// const aveArray = (arr) => {
+//     let sum = 0
+//     arr.forEach(element => {
+//         sum += element
+//     });
+//     return sum/ arr.length
+// }
+
+// console.log(aveArray([1,2,3,8,9]))
+
+
+
 
 /*
 18
@@ -337,9 +349,39 @@ Ex: shorterInArray(strings) => "alex"
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+// for loop
+// const shorterInArray = (arr) => {
+//     let min = arr[0]
+//     for(let i = 0; i < arr.length; i++){
+//         if(min.length > arr[i].length){
+//             min = arr[i]
+//         }
+//     }
+//     return min
+// }
+// console.log(shorterInArray(["mercer","alex", "madrasa","rashed2","emad","hala"]))
 
-
+//while loop
+// const shorterInArray = (arr) => {
+//     let min = arr[0]
+//     let count = 0
+//     while(count !== arr.length){
+//         console.log(arr[count])
+//         console.log(min.length > arr[count].length)
+//         console.log('...')
+//         if(min.length > arr[count].length){
+//             min = arr[count]
+//         }
+//         count++
+//     }
+//     return min
+// }
+// console.log(shorterInArray(["mercer","alex", "madrasa","rashed2","emad","hala"]))
 /*
+
+
+
+
 19
 Create a function called repeatChar
 that accept a string and char
@@ -353,8 +395,25 @@ Ex: repeatChar(string,"z") => 0
 **try more cases by your self
 */
 
-
+// const repeatChar = (text, ch) => {
+//     let count = 0
+//     for(let i =0 ;i < text.length; i++){        
+//         if(text.charAt(i) === ch)
+//         {
+//             count++
+//         }
+        
+//     }
+//     return count
+// }
+// console.log(repeatChar('alex mercer madrasa rashed2 emad hala', 'a'))
 /*
+
+
+
+
+
+
 20
 Create a function called evenIndexOddLength
 that accept an array of strings
@@ -366,6 +425,17 @@ Ex: evenIndexOddLength(strings) => ["madrasa"]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
+// const evenIndexOddLength = (strings) => {
+//     let len = strings.length
+//     let arr = []
+//     for(let i =0 ; i < len; i++){
+//         if(i % 2 === 0 && strings[i].length % 2 === 1){
+//             arr += strings[i]
+//         }
+//     }
+//     return arr;
+// }
+// console.log(evenIndexOddLength(["alex","mercer","madrasa","rashed2","emad","hala"]))
 
 
 /*
@@ -380,8 +450,19 @@ Ex: powerElementIndex(nums) => [0, 5, 16, 27, 16, 100000]
 ** solve it one time using for loop and another using while loop
 **try more cases by your self
 */
-
-
+const powerElementIndex = (arr) => {
+    let arrNum = []
+    
+    for(let i =0 ;i < arr.length; i++){
+        let num = 1
+        for(let j = 0 ; j < i; j++){
+            num *= arr[i]
+        }
+        arrNum.push(num)
+    }
+    return arrNum
+}
+console.log(powerElementIndex([44, 5, 4, 3, 2, 10]))
 /*
 22
 Create a function called evenNumberEvenIndex
