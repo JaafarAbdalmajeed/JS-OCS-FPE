@@ -114,7 +114,30 @@ function doubleValues(arr){
  *
  */
 
-    function vowelCount(str){
-        //Your Code Here
-    }
-    console.log(vowelCount("akjae"))
+ function vowelCount(str) {
+    let vowel = [
+        { 'char': 'i', 'count': 0 },
+        { 'char': 'a', 'count': 0 },
+        { 'char': 'e', 'count': 0 },
+        { 'char': 'o', 'count': 0 },
+        { 'char': 'u', 'count': 0 }
+    ];
+
+    str.toLowerCase().split('').forEach(ch => {
+        let vowelObject = vowel.find(element => element.char === ch);
+
+        if (vowelObject) {
+            vowelObject.count++;
+        
+        }
+    });
+    let vowelObj = {}
+    vowel.forEach(element => {
+        if(element.count > 0){
+            vowelObj[element.char] = element.count
+        }
+    })
+    return vowelObj;
+}
+
+console.log(vowelCount('I Am awesome and so are you'));
