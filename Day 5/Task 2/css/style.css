@@ -1,0 +1,7 @@
+.image{
+    display: inline-block;
+    width: 600px;
+    height: 300px;
+    background-color: aqua;
+    background-size: cover;
+}
