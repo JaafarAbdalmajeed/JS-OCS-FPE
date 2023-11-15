@@ -9,6 +9,16 @@ window.onload = function () {
     let div3 = document.createElement('div');
     let divText3 = document.createElement('div');
     
+    div1.style.marginBottom = 0;
+    div2.style.marginBottom = 0;
+    div3.style.marginBottom = 0;
+
+    div1.style.backgroundColor = 'rgb(136, 133, 133)'
+    div2.style.backgroundColor = 'rgb(136, 133, 133)'
+    div3.style.backgroundColor = 'rgb(136, 133, 133)'
+    divText1.style.marginTop = 0;
+    divText2.style.marginTop = 0;
+    divText3.style.marginTop = 0;
     
     divText1.style.display = 'none';
     divText2.style.display = 'none';
