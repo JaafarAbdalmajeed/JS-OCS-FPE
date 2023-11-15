@@ -19,9 +19,13 @@ repeatPass.addEventListener('input', () => {
         warningRepeat.innerHTML = 'the two password don\'match'
         warningRepeat.style.color = 'red'
     } else {
+        warningRepeat.innerHTML = ''
         const submitPass = document.createElement('button')
-        submitPass.value = 'Submit'
+        submitPass.textContent = 'Submit'
+        submitPass.style.width = '80px'
+        submitPass.style.height='40px'
+        document.body.appendChild(submitPass);
     }
-    document.body.appendChild(submitPass);
+    
 })
 
