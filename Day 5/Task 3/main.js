@@ -1,8 +1,11 @@
 let pass = document.getElementById('pass')
 let repeatPass = document.getElementById('repeat-pass')
+body.style.fontFamily = 'Arial, sans-serif'; 
+body.style.margin = 0;
 
 let warningPass = document.getElementById('warning-pass')
 let warningRepeat = document.getElementById('warning-repeat')
+
 
 pass.addEventListener('input', () => {
     if(pass.value.length < 6){
