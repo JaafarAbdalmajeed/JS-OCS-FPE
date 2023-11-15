@@ -43,6 +43,9 @@ window.onload = function () {
         let link = document.createElement('a')
         link.textContent = text
         link.href = '#'
+        if(text === 'Hide'){
+            link.style.display = 'block'
+        }
         link.addEventListener('click', clickHandler)
         return link
     }
