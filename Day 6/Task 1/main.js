@@ -30,8 +30,17 @@ form.addEventListener('submit', function(event) {
         languages: userLang
     };
 
-    console.log(userData);
-
+    localStorage.setItem('userData', JSON.stringify(userData))
     
+    let showUserData = JSON.parse(localStorage.getItem('userData'))
+    document.getElementById('showName').innerHTML = showUserData.name
+    document.getElementById('showAge').innerHTML = showUserData.age
+    document.getElementById('showGender').innerHTML = showUserData.gender
+    document.getElementById('showDescription').innerHTML = showUserData.description
+    document.getElementById('showMajor').innerHTML = showUserData.major
+    document.getElementById('showUniversity').innerHTML = showUserData.university
+    document.getElementById('showLanguages').innerHTML = showUserData.languages
+
+
 });
 
