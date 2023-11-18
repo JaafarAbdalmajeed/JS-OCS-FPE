@@ -1835,30 +1835,4 @@ let jsonObject = `{
     "limit": 30
     }` 
 
-let userData = JSON.parse(jsonObject)
-let table = document.getElementById('tableData')
-
-userData.users.forEach(element => {
-    let row = document.createElement('tr');
-    
-    let columnFirstName = document.createElement('td');
-    columnFirstName.innerHTML = element.firstName;
-    row.appendChild(columnFirstName);
-    
-    let columnPhone = document.createElement('td');
-    columnPhone.innerHTML = element.phone;
-    row.appendChild(columnPhone);
-
-    let columnEmail = document.createElement('td');
-    columnEmail.innerHTML = element.email;
-    row.appendChild(columnEmail);
-
-    table.appendChild(row);
-});
-
-let isShow = document.getElementsByTagName('h1')
-let isVisible = false
-isShow[0].addEventListener('dblclick', () => {
-    table.style.display = isVisible ? 'none' : 'true'
-    isVisible = !isVisible
-})
+    // export default jsonObject;
