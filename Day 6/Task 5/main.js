@@ -1857,8 +1857,11 @@ userData.users.forEach(element => {
 });
 
 let isShow = document.getElementsByTagName('h1')
-let isVisible = false
+table.style.display = 'none'
 isShow[0].addEventListener('dblclick', () => {
-    table.style.display = isVisible ? 'none' : 'true'
-    isVisible = !isVisible
+    if(table.style.display === 'none'){
+        table.style.display = 'table'
+    } else {
+        table.style.display = 'none'
+    }
 })
