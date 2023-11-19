@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box-register">
+            <form action="" id="formRegister">
+                <label for="firstName">first name</label>
+                <input type="text" name="firstName" id="firstName">
+                <span id="errorFirstName"></span>
+                <br>
+                <label for="lastName">last name</label>
+                <input type="text" name="lastName" id="lastName">
+                <span id="errorLastName"></span>
+                <br>
+                <label for="birthDate">birth date</label>
+                <input type="text" name="birthDate" id="birthDate">
+                <span id="errorBirthDate"></span>
+                <br>
+                <label for="email">email</label>
+                <input type="text" name="email" id="email">
+                <span id="errorEmail"></span>
+                <br>
+                <label for="emailConfirmation">email Confirmation</label>
+                <input type="text" name="emailConfirmation" id="emailConfirmation">
+                <span id="errorEmailConfirmation"></span>
+                <br>
+                <label for="password">password</label>
+                <input type="text" name="password" id="password">
+                <span id="errorPassword"></span>
+                <br>
+                <label for="passwordConfirmation">Password Confirmation</label>
+                <input type="text" name="passwordConfirmation" id="passwordConfirmation">
+                <span id="errorPasswordConfirmation"></span>
+                <br>
+                <input type="submit" id="submitReg" name="submit">
+            </form>
+        </div>
+        <div class="box-login">
+            <form action="" id="formLogin">
+                <label for="logEmail">Email</label>
+                <input type="email" name="email" id="logEmail">
+                <br>
+                <label for="logPassword">Password</label>
+                <input type="password" name="password" id="logPassword">
+                <br>
+                <input type="submit" id="submitLog" name="submit">
+            </form>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
