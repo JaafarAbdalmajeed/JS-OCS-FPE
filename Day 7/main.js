@@ -24,55 +24,54 @@ const validateInputs = ({ firstName, lastName, birthDate, email, emailConfirmati
     if(firstName || lastName){
         if (!NameRegex.test(firstName) || !NameRegex.test(lastName)) {
             displayError('errorFirstName', 'Invalid name. Must contain only letters and have a length between 2 to 30 characters.');
-            return;
+            return 1;
         }
     }
     if(lastName){
         if (!NameRegex.test(firstName) || !NameRegex.test(lastName)) {
             displayError('errorLastName', 'Invalid name. Must contain only letters and have a length between 2 to 30 characters.');
-            return;
+            return 1;
         }
     }
 
     if(email || emailConfirmation){
         if (!emailRegex.test(email)) {
             displayError('errorLastName', 'Invalid email address.');
-            return;
+            return 1;
         }
         if (!emailRegex.test(emailConfirmation)) {
             displayError('errorEmailConfirmation', 'Invalid email address.');
-            return;
+            return 1;
         }
 
         if (email !== emailConfirmation) {
             displayError('emailConfirmation', 'Email Confirmation does not match Email.');
-            return;
+            return 1;
         }
     }
 
     if(password || passwordConfirmation){
         if (!passwordRegex.test(password)) {
             displayError('errorPassword', 'Invalid password. Must contain at least one lowercase letter, one uppercase letter, one digit, and be at least 8 characters long.');
-            return;
+            return 1;
         }
 
         if (!passwordRegex.test(password)) {
             displayError('errorPasswordConfirmation', 'Invalid password. Must contain at least one lowercase letter, one uppercase letter, one digit, and be at least 8 characters long.');
-            return;
+            return 1;
         }
 
-        if (password !== passwordConfirmation) {
-            displayError('passwordConfirmation', 'Password Confirmation does not match Password.');
-            return;
+        if (!passwordRegex.test(passwordConfirmation)) {
+            displayError('errorPasswordConfirmation', 'Invalid password. Must contain at least one lowercase letter, one uppercase letter, one digit, and be at least 8 characters long.');
+            return 1;
         }
     }
 
-    if(birthDate){
-        if (birthDateRegex.test(birthDate)) {
-            displayError('errorBirthDate', 'Invalid birthDate.');
-            return;
-        }
+    if (!birthDateRegex.test(birthDate)) {
+        displayError('errorBirthDate', 'Invalid birthDate.');
+        return 1;
     }
+    
 
 }
 
@@ -88,7 +87,7 @@ const handleFormSubmit = (event) => {
     let emailConfirmation = document.getElementById('emailConfirmation').value;
 
 
-    validateInputs({
+    let validInputs = validateInputs({
         firstName,
         lastName,
         birthDate,
@@ -107,6 +106,10 @@ const handleFormSubmit = (event) => {
             password,
         };
 
+        if(validInputs === 1){
+            alert(' no Registration ');
+            return
+        }
         localStorage.setItem('userInfo', JSON.stringify(userInfo));
         alert('Registration successful');
     } else if (event.target.id === 'formLogin') {
